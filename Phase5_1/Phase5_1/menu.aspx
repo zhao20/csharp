@@ -9,7 +9,11 @@
 <body>
     <form id="form1" runat="server">
     <div>
-
+        <h3> Main Menu</h3>
+        <a href="search.aspx">Search Page</a><br /><br />
+        <a href="loadData.aspx">Load Local Data</a><br /><br />
+        <a href ="add.aspx">Add License</a><br /><br />
+        <a href="modify.aspx">Modify License</a><br /><br />
     </div>
     </form>
 </body>
