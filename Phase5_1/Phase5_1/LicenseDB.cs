@@ -12,7 +12,7 @@ namespace Phase5_1
     using System;
     using System.Collections.Generic;
     
-    public partial class License
+    public partial class LicenseDB
     {
         public string Business_Name { get; set; }
         public string Street_Address { get; set; }

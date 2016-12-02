@@ -13,7 +13,7 @@ using System.Data;
 
 namespace Phase5_1
 {
-    class Auto : License
+    public class Auto : License
     {
         //Descrpition of Business
         private string autoDiscrption;

@@ -13,7 +13,7 @@ using System.Data;
 
 namespace Phase5_1
 {
-    class OtherBusiness:License
+    public class OtherBusiness:License
     {
         //Descrpition of Business
         private string otherDescription;

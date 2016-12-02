@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace Phase5_1
 {
-    class LicenseCollection : Collection<License>
+    public class LicenseCollection : Collection<License>
     {
 
         private List<License> LicenseList;

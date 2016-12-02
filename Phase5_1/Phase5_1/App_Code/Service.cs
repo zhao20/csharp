@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Phase5_1
 {
-    class Service:License
+    public class Service:License
     {
         
     }

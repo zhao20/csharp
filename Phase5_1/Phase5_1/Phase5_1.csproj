@@ -108,12 +108,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="License.edmx">
+    <EntityDeploy Include="LicenseDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>License.Designer.cs</LastGenOutput>
+      <LastGenOutput>LicenseDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="License.edmx.diagram">
-      <DependentUpon>License.edmx</DependentUpon>
+    <Content Include="LicenseDBModel.edmx.diagram">
+      <DependentUpon>LicenseDBModel.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -124,15 +124,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="add.aspx" />
-    <Content Include="License.Context.tt">
+    <Content Include="LicenseDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>License.edmx</DependentUpon>
-      <LastGenOutput>License.Context.cs</LastGenOutput>
+      <DependentUpon>LicenseDBModel.edmx</DependentUpon>
+      <LastGenOutput>LicenseDBModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="License.tt">
+    <Content Include="LicenseDBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>License.edmx</DependentUpon>
-      <LastGenOutput>License1.cs</LastGenOutput>
+      <DependentUpon>LicenseDBModel.edmx</DependentUpon>
+      <LastGenOutput>LicenseDBModel.cs</LastGenOutput>
     </Content>
     <Content Include="menu.aspx" />
     <Content Include="modify.aspx" />
@@ -148,40 +148,31 @@
     <Compile Include="add.aspx.designer.cs">
       <DependentUpon>add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="License.cs">
-      <DependentUpon>License.tt</DependentUpon>
+    <Compile Include="App_Code\Auto.cs" />
+    <Compile Include="App_Code\CSV.cs" />
+    <Compile Include="App_Code\Hotel.cs" />
+    <Compile Include="App_Code\License.cs" />
+    <Compile Include="App_Code\LicenseCollection.cs" />
+    <Compile Include="App_Code\OtherBusiness.cs" />
+    <Compile Include="App_Code\Restaurant.cs" />
+    <Compile Include="App_Code\Service.cs" />
+    <Compile Include="LicenseDB.cs">
+      <DependentUpon>LicenseDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="License1.cs">
+    <Compile Include="LicenseDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>License.tt</DependentUpon>
+      <DependentUpon>LicenseDBModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>License.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>License.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>License.tt</DependentUpon>
-    </Compile>
-    <Content Include="App_Code\Auto.cs" />
-    <Content Include="App_Code\CSV.cs" />
-    <Content Include="App_Code\Hotel.cs" />
-    <Content Include="App_Code\License.cs" />
-    <Content Include="App_Code\LicenseCollection.cs" />
-    <Content Include="App_Code\OtherBusiness.cs" />
-    <Content Include="App_Code\Restaurant.cs" />
-    <Content Include="App_Code\Service.cs" />
-    <Compile Include="License.Context.cs">
+    <Compile Include="LicenseDBModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>License.Context.tt</DependentUpon>
+      <DependentUpon>LicenseDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="License.Designer.cs">
+    <Compile Include="LicenseDBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>License.edmx</DependentUpon>
+      <DependentUpon>LicenseDBModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="menu.aspx.cs">
       <DependentUpon>menu.aspx</DependentUpon>

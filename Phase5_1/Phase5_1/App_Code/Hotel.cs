@@ -13,7 +13,7 @@ using System.Data;
 
 namespace Phase5_1
 {
-    class Hotel:License
+    public class Hotel:License
     {
         //Descrpition of Business
         private string hotelDiscrption;

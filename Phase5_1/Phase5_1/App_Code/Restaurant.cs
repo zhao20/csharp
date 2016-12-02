@@ -14,7 +14,7 @@ using System.Data;
 
 namespace Phase5_1
 {
-    class Restaurant:License
+    public class Restaurant:License
     {   
         //Descrpition of Business
         private string restaurantDescription;
