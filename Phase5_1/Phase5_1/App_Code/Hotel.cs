@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace ConsoleApplication1
+namespace Phase5_1
 {
     class Hotel:License
     {
