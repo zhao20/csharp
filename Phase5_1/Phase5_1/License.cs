@@ -14,23 +14,15 @@ namespace Phase5_1
     
     public partial class License
     {
-        public string License_Fiscal_Year_License_Num { get; set; }
         public string Business_Name { get; set; }
         public string Street_Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
         public string Business_Phone_Number { get; set; }
+        public string License_Status { get; set; }
+        public string FID { get; set; }
         public string Classification_Code { get; set; }
         public string Classification_Description { get; set; }
-        public string License_Expir_Date { get; set; }
-        public string Issue_Date { get; set; }
-        public string License_Fiscal_Year { get; set; }
-        public string License_Status { get; set; }
-        public string License_Status_Description { get; set; }
-        public string Council_District_Code { get; set; }
-        public string Council_District_Description { get; set; }
-        public string Location_1 { get; set; }
-        public string FID { get; set; }
     }
 }

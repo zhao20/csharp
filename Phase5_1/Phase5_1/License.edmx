@@ -9,24 +9,16 @@
           <Key>
             <PropertyRef Name="FID" />
           </Key>
-          <Property Name="License_Fiscal_Year_License_Num" Type="nchar" MaxLength="10" />
-          <Property Name="Business_Name" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Street_Address" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Business_Name" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="Street_Address" Type="nchar" MaxLength="100" />
           <Property Name="City" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="State" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="State" Type="nchar" MaxLength="10" />
           <Property Name="Zip" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Business_Phone_Number" Type="nchar" MaxLength="10" />
-          <Property Name="Classification_Code" Type="nchar" MaxLength="10" />
-          <Property Name="Classification_Description" Type="nchar" MaxLength="10" />
-          <Property Name="License_Expir_Date" Type="nchar" MaxLength="10" />
-          <Property Name="Issue_Date" Type="nchar" MaxLength="10" />
-          <Property Name="License_Fiscal_Year" Type="nchar" MaxLength="10" />
-          <Property Name="License_Status" Type="nchar" MaxLength="10" />
-          <Property Name="License_Status_Description" Type="nchar" MaxLength="10" />
-          <Property Name="Council_District_Code" Type="nchar" MaxLength="10" />
-          <Property Name="Council_District_Description" Type="nchar" MaxLength="10" />
-          <Property Name="Location_1" Type="nchar" MaxLength="10" />
+          <Property Name="Business_Phone_Number" Type="nchar" MaxLength="15" />
+          <Property Name="License_Status" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="FID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Classification_Code" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Classification_Description" Type="nchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -82,24 +74,16 @@
           <Key>
             <PropertyRef Name="FID" />
           </Key>
-          <Property Name="License_Fiscal_Year_License_Num" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Business_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Street_Address" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Business_Name" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Street_Address" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="City" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="State" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Zip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Business_Phone_Number" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Classification_Code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Classification_Description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="License_Expir_Date" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Issue_Date" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="License_Fiscal_Year" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="License_Status" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="License_Status_Description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Council_District_Code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Council_District_Description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Location_1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Business_Phone_Number" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="License_Status" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="FID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Classification_Code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Classification_Description" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -165,24 +149,16 @@
           <EntitySetMapping Name="Licenses">
             <EntityTypeMapping TypeName="LicenseModel.License">
               <MappingFragment StoreEntitySet="License">
-                <ScalarProperty Name="License_Fiscal_Year_License_Num" ColumnName="License_Fiscal_Year_License_Num" />
                 <ScalarProperty Name="Business_Name" ColumnName="Business_Name" />
                 <ScalarProperty Name="Street_Address" ColumnName="Street_Address" />
                 <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="State" ColumnName="State" />
                 <ScalarProperty Name="Zip" ColumnName="Zip" />
                 <ScalarProperty Name="Business_Phone_Number" ColumnName="Business_Phone_Number" />
+                <ScalarProperty Name="License_Status" ColumnName="License_Status" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
                 <ScalarProperty Name="Classification_Code" ColumnName="Classification_Code" />
                 <ScalarProperty Name="Classification_Description" ColumnName="Classification_Description" />
-                <ScalarProperty Name="License_Expir_Date" ColumnName="License_Expir_Date" />
-                <ScalarProperty Name="Issue_Date" ColumnName="Issue_Date" />
-                <ScalarProperty Name="License_Fiscal_Year" ColumnName="License_Fiscal_Year" />
-                <ScalarProperty Name="License_Status" ColumnName="License_Status" />
-                <ScalarProperty Name="License_Status_Description" ColumnName="License_Status_Description" />
-                <ScalarProperty Name="Council_District_Code" ColumnName="Council_District_Code" />
-                <ScalarProperty Name="Council_District_Description" ColumnName="Council_District_Description" />
-                <ScalarProperty Name="Location_1" ColumnName="Location_1" />
-                <ScalarProperty Name="FID" ColumnName="FID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
