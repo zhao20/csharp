@@ -81,6 +81,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -130,6 +131,7 @@
       <DependentUpon>LicenseModel.edmx</DependentUpon>
       <LastGenOutput>LicenseModel.cs</LastGenOutput>
     </Content>
+    <Content Include="List.aspx" />
     <Content Include="MainMenu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -160,6 +162,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LicenseModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.aspx.cs">
       <DependentUpon>MainMenu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,6 +179,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
