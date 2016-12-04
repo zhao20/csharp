@@ -143,6 +143,7 @@
     <Compile Include="App_Code\License.cs" />
     <Compile Include="App_Code\LicenseCollection.cs" />
     <Compile Include="App_Code\OtherBusiness.cs" />
+    <Content Include="App_Code\RegularExpressions.cs" />
     <Compile Include="App_Code\Restaurant.cs" />
     <Compile Include="App_Code\Service.cs" />
     <Compile Include="LicenseDB.cs">
