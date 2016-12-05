@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <center><form id="form1" runat="server">
     <div>
     
     </div>
@@ -15,10 +15,14 @@
     <p><h3><strong>Welcome to License System</strong></h3></p>
         <br /><br /><br />
        <a href="List.aspx"> List All Data</a>
-        <br />
+        <br /><br />
         <a href="adding.aspx">Add a License</a>
+        <br /><br />
+        <a href="Search.aspx">Search</a>
+        <br /><br />
+        <a href="Statistics.aspx">Statistics</a>
     </form>
-
+        </center>
     </body>
 </html>
 

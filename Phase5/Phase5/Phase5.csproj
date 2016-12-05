@@ -133,6 +133,8 @@
     </Content>
     <Content Include="List.aspx" />
     <Content Include="MainMenu.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="Statistics.aspx" />
     <Content Include="Web.config" />
     <Content Include="Adding.aspx" />
   </ItemGroup>
@@ -143,6 +145,20 @@
     <Compile Include="App_Code\License.cs" />
     <Compile Include="App_Code\LicenseCollection.cs" />
     <Compile Include="App_Code\OtherBusiness.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.aspx.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statistics.aspx.designer.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+    </Compile>
     <Content Include="App_Code\RegularExpressions.cs" />
     <Compile Include="App_Code\Restaurant.cs" />
     <Compile Include="App_Code\Service.cs" />
