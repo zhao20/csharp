@@ -11,6 +11,13 @@ namespace Phase5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            LinqDataSource lds = new LinqDataSource();
+            
+            
+            
+
+            ListView1.DataSource = lds;
+
 
         }
     }
