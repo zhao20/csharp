@@ -20,20 +20,31 @@ namespace Phase5
     {
 
         private List<License> LicenseList;
-        private string path;
+        private string filePath;
         //creates license collection class
         public LicenseCollection()
         {
 
             //creates new list 
             LicenseList = new List<License>();
-            ParseData(path);
+            filePath = "Business_Licenses1.csv";
+            ParseData(filePath);
                              
         }
 
+        //creates license collection class
+        public LicenseCollection(string path)
+        {
+
+            //creates new list 
+            LicenseList = new List<License>();
+            ParseData(path);
+
+        }
         //method to parse data to populate our database
         public void ParseData(string path)
         {
+            
             if (!String.IsNullOrWhiteSpace(path))
             {
                 DataTable dt = CSVFileHelper.OpenCSV(path);

@@ -113,7 +113,7 @@ namespace Phase5
         {
            // creates new Data Table and initiates new file stream
             DataTable dt = new DataTable();
-            FileStream fs = new FileStream("C:\\GitHub\\csharp\\Phase5\\Phase5\\Business_Licenses1.csv", System.IO.FileMode.Open, System.IO.FileAccess.Read);
+            FileStream fs = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read);
 
 
             //intitiates stream reader for new file stream
