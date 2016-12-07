@@ -7,7 +7,7 @@
     <head runat="server">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Tabs - Default functionality</title>
+  <title>Statistic Page</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -28,13 +28,14 @@
   <div id="tabs-1">
      
     
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="EntityDataSource1" DataTextField="City" DataValueField="City">
-        </asp:DropDownList>
+       <p> <asp:DropDownList ID="ddlCity" runat="server" DataSourceID="EntityDataSource1" DataTextField="City" DataValueField="City">
+        </asp:DropDownList>&nbsp; &nbsp;&nbsp;&nbsp;<right> <asp:Button ID="btnTopThree" runat="server" Text="Seach" OnClick="btnTopThree_Click" /></right>
         <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=LicenseEntities" 
             DefaultContainerName="LicenseEntities" EnableFlattening="False" EntitySetName="LicenseDBs" Select="DISTINCT it.[City]" OrderBy="it.[City]"   >
         </asp:EntityDataSource>
-
-      <asp:ListView ID="ListView1" runat="server"></asp:ListView>
+      </p>
+       <asp:GridView ID="GridView1" runat="server">
+       </asp:GridView>
 
     <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
   </div>

@@ -13,5 +13,33 @@ namespace Phase5
         {
 
         }
+
+        protected void btnTopThree_Click(object sender, EventArgs e)
+        {
+            using(LicenseEntities le = new LicenseEntities())
+            {
+                GridView1.DataSource = null;
+                GridView1.DataBind();
+                if (!String.IsNullOrWhiteSpace(ddlCity.SelectedValue))
+                {
+                    var licenses = le.LicenseDBs;
+                    var result = licenses.Where(n => n.City == ddlCity.SelectedValue).Take(3);
+                    
+                   // lvTopThree.DataSource = result.ToList();
+                    GridView1.DataSource = result.ToList();
+                    GridView1.DataBind();
+                 
+                }
+
+            }
+
+
+        }
+
+        //private ListViewItem InjectToListView(var list)
+        //{
+
+        //    return new ListViewItem();
+        //}
     }
 }
