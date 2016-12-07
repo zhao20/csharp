@@ -14,7 +14,10 @@
 
     <p><h3><strong>Welcome to License System</strong></h3></p>
         <br /><br /><br />
-       <a href="List.aspx"> List All Data</a>
+        
+       <a href="LoadRemove.aspx"> Load or Remove Data</a>
+        <br /><br />
+       <a href="List.aspx"> Show entire List</a>
         <br /><br />
         <a href="adding.aspx">Add a License</a>
         <br /><br />

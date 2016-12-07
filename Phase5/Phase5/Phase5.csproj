@@ -102,6 +102,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LoadRemove.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -145,6 +146,13 @@
     <Compile Include="App_Code\License.cs" />
     <Compile Include="App_Code\LicenseCollection.cs" />
     <Compile Include="App_Code\OtherBusiness.cs" />
+    <Compile Include="LoadRemove.aspx.cs">
+      <DependentUpon>LoadRemove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoadRemove.aspx.designer.cs">
+      <DependentUpon>LoadRemove.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -20,39 +20,46 @@ namespace Phase5
     {
 
         private List<License> LicenseList;
-
+        private string path;
         //creates license collection class
         public LicenseCollection()
         {
 
             //creates new list 
             LicenseList = new List<License>();
-            ParseData();
+            ParseData(path);
                              
         }
 
         //method to parse data to populate our database
-        public void ParseData()
+        public void ParseData(string path)
         {
-            DataTable dt = CSVFileHelper.OpenCSV("Business_Licenses1.csv");
-
-            //iterates and adds data to list
-            foreach (DataRow row in dt.Rows)
+            if (!String.IsNullOrWhiteSpace(path))
             {
-                if (row["Classification_Code"].ToString().Equals("REST"))
+                DataTable dt = CSVFileHelper.OpenCSV(path);
+
+                //iterates and adds data to list
+                foreach (DataRow row in dt.Rows)
                 {
-                    LicenseList.Add(new Restaurant(row));
-                }else if (row["Classification_Code"].ToString().Equals("HOTEL"))
-                {
-                    LicenseList.Add(new Hotel(row));
-                }else if (row["Classification_Code"].ToString().Equals("AUTO"))
-                {
-                    LicenseList.Add(new Auto(row));
-                }else
-                {
-                    LicenseList.Add(new OtherBusiness(row));
+                    if (row["Classification_Code"].ToString().Equals("REST"))
+                    {
+                        LicenseList.Add(new Restaurant(row));
+                    }
+                    else if (row["Classification_Code"].ToString().Equals("HOTEL"))
+                    {
+                        LicenseList.Add(new Hotel(row));
+                    }
+                    else if (row["Classification_Code"].ToString().Equals("AUTO"))
+                    {
+                        LicenseList.Add(new Auto(row));
+                    }
+                    else
+                    {
+                        LicenseList.Add(new OtherBusiness(row));
+                    }
+                    //LicenseList.Add(new License(row));
                 }
-                //LicenseList.Add(new License(row));
+
             }
 
         }
