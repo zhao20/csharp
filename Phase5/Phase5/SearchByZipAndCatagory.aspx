@@ -8,7 +8,7 @@
 
         function BackToMain() {
 
-            window.location.href = 'MainMenu.aspx';
+            window.location.href = 'Menu.aspx';
         }
 </script>
 </head>
