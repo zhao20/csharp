@@ -28,38 +28,128 @@ namespace Phase5
                 LinqDataSource ld = new LinqDataSource();
 
                 var search = le.LicenseDBs;
-                if (TextBox1.Text != "" && TextBox1.Text != "Business Name")
-                {
-                    var searcher = search.Where(n => n.Business_Name.Contains(TextBox1.Text)).ToList();
+                var condition = search;
+                var condition1 = search.Where(n => n.Business_Name.Contains(TextBox1.Text)).ToList();
+                var condition2 = search.Where(n => n.Street_Address.Contains(TextBox2.Text)).ToList();
 
-                    if (searcher.Count > 0)
+                string ddl1 = DropDownList1.SelectedValue;
+                var condition3 = search.Where(n => n.City.Equals(ddl1)).ToList();
+
+                GridView1.DataSource = condition3;
+                GridView1.DataBind();
+                Label1.Text = "Businesses matching either Name or Address shown.    Refreshed at " + DateTime.Now.ToString();
+
+
+                if (condition1.Count > 0 && condition2.Count > 0)
+                {
+
+                    foreach (var i in condition1)
                     {
-                        GridView1.DataSource = searcher;
-                        GridView1.DataBind();
-                        Label1.Text = "Refreshed at " + DateTime.Now.ToString();
+                        condition2.Add(i);
                     }
-                    else {
-                        Label1.Text = "No results found." + "\n" + DateTime.Now.ToString();
-                    }
+
+                    GridView1.DataSource = condition2;
+                    GridView1.DataBind();
+                    Label1.Text = "Businesses matching either Name or Address shown.    Refreshed at " + DateTime.Now.ToString();
                 }
                 else {
-                    if (TextBox2.Text != "" && TextBox2.Text != "Address")
+                    if (condition1.Count > 0)
                     {
-                        var searcherA = search.Where(n => n.Street_Address.Contains(TextBox2.Text)).ToList();
+                        GridView1.DataSource = condition1;
+                        GridView1.DataBind();
+                        Label1.Text = "Search performed by Business Name.    Refreshed at " + DateTime.Now.ToString();
+                    }
+                    else {
 
-                        if (searcherA.Count > 0)
+                        if (condition2.Count > 0)
                         {
-                            GridView1.DataSource = searcherA;
+                            GridView1.DataSource = condition2;
                             GridView1.DataBind();
-                            Label1.Text = "Refreshed at " + DateTime.Now.ToString();
+                            Label1.Text = "Search performed by Street Address.    Refreshed at " + DateTime.Now.ToString();
                         }
+
                         else {
-                            Label1.Text = "No results found." + "\n" + DateTime.Now.ToString();
+                            Label1.Text = "No Results Found.     Refreshed at " + DateTime.Now.ToString();
                         }
                     }
-                    else { Label1.Text = "No results found." + "\n" + DateTime.Now.ToString(); }
                 }
+
+
             }
-        } 
+        }
     }
 }
+
+//        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+//        {
+//            using (LicenseEntities le = new LicenseEntities())
+//            {
+//                LinqDataSource ld = new LinqDataSource();
+
+//                var search = le.LicenseDBs;
+//                var ddlc = DropDownList2.SelectedIndex;
+//                var ddl2 = search.Where(n => n.State.Equals(ddlc)).ToList();
+
+//                if (ddl2.Count > 0)
+//                {
+//                    GridView1.DataSource = ddl2;
+//                    GridView1.DataBind();
+//                    Label1.Text = "Search performed by State.    Refreshed at " + DateTime.Now.ToString();
+//                }
+
+//                else {
+//                    Label1.Text = "No Results Found.     Refreshed at " + DateTime.Now.ToString();
+//                }
+//            }
+//        }
+//    }
+//}
+
+
+
+
+                //if (TextBox1.Text != "" && TextBox1.Text != "Business Name")
+                //{
+                //    if (TextBox2.Text != "" && TextBox2.Text != "Address")
+                //    {
+
+                //        if (condition3.Count > 0)
+                //        {
+                //            GridView1.DataSource = condition3;
+                //            GridView1.DataBind();
+                //            Label1.Text = "Businesses matching either Name or Address shown.    Refreshed at " + DateTime.Now.ToString();
+                //        }
+                //        else {
+                //            Label1.Text = "No results found." + "\n" + DateTime.Now.ToString();
+                //        }
+                //    }
+                //    else {
+
+                //        if (condition1.Count > 0)
+                //        {
+                //            GridView1.DataSource = condition1;
+                //            GridView1.DataBind();
+                //            Label1.Text = "Database searched by Business Name.  Refreshed at " + DateTime.Now.ToString();
+                //        }
+                //        else {
+                //            Label1.Text = "No results found." + "\n" + DateTime.Now.ToString();
+                //        }
+
+                //    }
+                //}
+                //else {
+                //    if (condition2.Count > 0)
+                //    {
+                //        GridView1.DataSource = condition2;
+                //        GridView1.DataBind();
+                //        Label1.Text = "Database searched by Street Address.  Refreshed at " + DateTime.Now.ToString();
+
+                //    }
+                //    else { Label1.Text = "No results found." + "\n" + DateTime.Now.ToString(); }
+                //}
+                //    }
+                
+
+
+            
+         

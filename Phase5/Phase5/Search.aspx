@@ -21,10 +21,15 @@
 
             <asp:TextBox ID="TextBox2" runat="server">Address</asp:TextBox>
         
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="City" DataValueField="City" >
-                </asp:DropDownList>
-         
-             <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="State" DataValueField="State">
+                </asp:DropDownList> 
+                
+            
+
+             <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="State" DataValueField="State" >
                 </asp:DropDownList>                            
             
             <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button1_Click1" />
@@ -40,7 +45,8 @@
             <asp:GridView ID="GridView1" runat="server"></asp:GridView>
             
             
-        
+        </ContentTemplate>              
+            </asp:UpdatePanel>
            
     </form>
 </body>
