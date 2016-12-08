@@ -11,11 +11,13 @@ namespace Phase5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblMessage.Text = "";
         }
 
         protected void btnTopThree_Click(object sender, EventArgs e)
         {
+            lblMessage.Text = "";
+            try { 
             using(LicenseEntities le = new LicenseEntities())
             {
                 GridView1.DataSource = null;
@@ -32,14 +34,14 @@ namespace Phase5
                 }
 
             }
-
-
         }
+            catch (Exception)
+            {
+                lblMessage.Text = "DataBase Connection Failed!";
+            }
 
-        //private ListViewItem InjectToListView(var list)
-        //{
+}
 
-        //    return new ListViewItem();
-        //}
+       
     }
 }

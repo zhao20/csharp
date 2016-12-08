@@ -12,22 +12,33 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-  $( function() {
-    $( "#tabs" ).tabs();
-  } );
+      $(function () {
+          $("#tabs").tabs({
+              panelTemplate: "<iframe style='width:100%'></iframe>",
+              idPrefix: "ui-tabs-",
+              select: function (event, ui) {
+                  if (!$("#ui-tabs-" + ui.index).prop("src")) {
+                      $("#ui-tabs-" + ui.index).attr("src", $.data(ui.tab, 'load.tabs'));
+                  }
+              }
+          });
+      });
+
+
   </script>
 </head>
 <body>
  <form id ="form1" runat="server">
-<div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">Nunc tincidunt</a></li>
-    <li><a href="#tabs-2">Proin dolor</a></li>
-    <li><a href="#tabs-3">Aenean lacinia</a></li>
-  </ul>
-  <div id="tabs-1">
-     
-    
+
+     <div id="tabs">
+    <ul style="padding: 0; margin: 0;">
+        <li class="context-tab"><a id="recent-tab" href="#ui-tabs-0">First Three</a></li>
+        <li class="context-tab"><a id="popular-tab" href="SearchByZip.aspx">Search By Zip</a></li>
+        <li class="context-tab"><a id="random-tab" href="SearchByZipAndCatagory.aspx">Search By Zip And Category</a></li>
+        <li class="context-tab"><a id="question-tab" href="http://www.bing.com">Bing</a></li>
+    </ul>
+
+    <div id="ui-tabs-0"> 
        <p> <asp:DropDownList ID="ddlCity" runat="server" DataSourceID="EntityDataSource1" DataTextField="City" DataValueField="City">
         </asp:DropDownList>&nbsp; &nbsp;&nbsp;&nbsp;<right> <asp:Button ID="btnTopThree" runat="server" Text="Seach" OnClick="btnTopThree_Click" /></right>
         <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=LicenseEntities" 
@@ -37,17 +48,37 @@
        <asp:GridView ID="GridView1" runat="server">
        </asp:GridView>
 
-    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-  </div>
+    </div>
+
+</div>
+<div id="tabs">
+
+
+
+  <div id="ui-tabs-0">
+     
+    
+
+      </div>
   <div id="tabs-2">
-    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+
+
+
+                
+
   </div>
   <div id="tabs-3">
-    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-  </div>
-</div>
- 
+     
+       </div>
+      <div id="tabs-4">
+    
+            </div>
+      <div id="tabs-5">
+
+      </div>
+
+</div>    
+     <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
  </form>
 </body>
 

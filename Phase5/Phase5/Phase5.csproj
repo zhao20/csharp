@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LoadRemove.aspx" />
+    <Content Include="NumberOfShopOnZip.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -135,6 +136,8 @@
     <Content Include="List.aspx" />
     <Content Include="MainMenu.aspx" />
     <Content Include="Search.aspx" />
+    <Content Include="SearchByZip.aspx" />
+    <Content Include="SearchByZipAndCatagory.aspx" />
     <Content Include="Statistics.aspx" />
     <Content Include="Update.aspx" />
     <Content Include="Web.config" />
@@ -154,12 +157,33 @@
     <Compile Include="LoadRemove.aspx.designer.cs">
       <DependentUpon>LoadRemove.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NumberOfShopOnZip.aspx.cs">
+      <DependentUpon>NumberOfShopOnZip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NumberOfShopOnZip.aspx.designer.cs">
+      <DependentUpon>NumberOfShopOnZip.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchByZip.aspx.cs">
+      <DependentUpon>SearchByZip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchByZip.aspx.designer.cs">
+      <DependentUpon>SearchByZip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchByZipAndCatagory.aspx.cs">
+      <DependentUpon>SearchByZipAndCatagory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchByZipAndCatagory.aspx.designer.cs">
+      <DependentUpon>SearchByZipAndCatagory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Statistics.aspx.cs">
       <DependentUpon>Statistics.aspx</DependentUpon>
