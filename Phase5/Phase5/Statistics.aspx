@@ -40,7 +40,7 @@
 
     <div id="ui-tabs-0"> 
        <p> <asp:DropDownList ID="ddlCity" runat="server" DataSourceID="EntityDataSource1" DataTextField="City" DataValueField="City">
-        </asp:DropDownList>&nbsp; &nbsp;&nbsp;&nbsp;<right> <asp:Button ID="btnTopThree" runat="server" Text="Seach" OnClick="btnTopThree_Click" /></right>
+        </asp:DropDownList>&nbsp; &nbsp;&nbsp;&nbsp;<right> <asp:Button ID="btnTopThree" runat="server" Text="Search" OnClick="btnTopThree_Click" /></right>
         <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=LicenseEntities" 
             DefaultContainerName="LicenseEntities" EnableFlattening="False" EntitySetName="LicenseDBs" Select="DISTINCT it.[City]" OrderBy="it.[City]"   >
         </asp:EntityDataSource>

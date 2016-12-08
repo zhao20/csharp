@@ -5,6 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        a:hover{font-size:24px;
+                background-color: yellow;
+                
+        }
+    </style>
 </head>
 <body>
     <center><form id="form1" runat="server">
@@ -12,7 +18,7 @@
     
     </div>
 
-    <p><h3><strong>Welcome to License System</strong></h3></p>
+    <p><h1><strong>Welcome to License System</strong></h1></p>
         <br /><br /><br />
         
        <a href="LoadRemove.aspx"> Load or Remove Data</a>
