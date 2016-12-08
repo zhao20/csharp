@@ -35,7 +35,7 @@
         <li class="context-tab"><a id="recent-tab" href="#ui-tabs-0">First Three</a></li>
         <li class="context-tab"><a id="popular-tab" href="SearchByZip.aspx">Search By Zip</a></li>
         <li class="context-tab"><a id="random-tab" href="SearchByZipAndCatagory.aspx">Search By Zip And Category</a></li>
-        <li class="context-tab"><a id="question-tab" href="http://www.bing.com">Bing</a></li>
+       
     </ul>
 
     <div id="ui-tabs-0"> 

@@ -12,13 +12,9 @@
     
     </div>
         
-        <asp:ListView ID="ListView1" runat="server" DataKeyNames="FID" DataSourceID="EntityDataSource1" InsertItemPosition="LastItem">
+        <asp:ListView ID="ListView1" runat="server" DataKeyNames="FID" DataSourceID="EntityDataSource1">
             <AlternatingItemTemplate>
                 <tr style="background-color: #FFFFFF;color: #284775;">
-                    <td>
-                        <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
-                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
-                    </td>
                     <td>
                         <asp:Label ID="Business_NameLabel" runat="server" Text='<%# Eval("Business_Name") %>' />
                     </td>
@@ -137,10 +133,6 @@
             <ItemTemplate>
                 <tr style="background-color: #E0FFFF;color: #333333;">
                     <td>
-                        <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
-                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
-                    </td>
-                    <td>
                         <asp:Label ID="Business_NameLabel" runat="server" Text='<%# Eval("Business_Name") %>' />
                     </td>
                     <td>
@@ -178,7 +170,6 @@
                         <td runat="server">
                             <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                                 <tr runat="server" style="background-color: #E0FFFF;color: #333333;">
-                                    <th runat="server"></th>
                                     <th runat="server">Business_Name</th>
                                     <th runat="server">Street_Address</th>
                                     <th runat="server">City</th>
@@ -202,10 +193,6 @@
             </LayoutTemplate>
             <SelectedItemTemplate>
                 <tr style="background-color: #E2DED6;font-weight: bold;color: #333333;">
-                    <td>
-                        <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
-                        <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
-                    </td>
                     <td>
                         <asp:Label ID="Business_NameLabel" runat="server" Text='<%# Eval("Business_Name") %>' />
                     </td>
@@ -241,9 +228,9 @@
         </asp:ListView>
         <asp:LinqDataSource ID="LinqDataSource1" runat="server" EntityTypeName="">
         </asp:LinqDataSource>
-        <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=LicenseEntities" DefaultContainerName="LicenseEntities" EnableDelete="True" EnableFlattening="False" EnableInsert="True" EnableUpdate="True" EntitySetName="LicenseDBs">
+        <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=LicenseEntities" DefaultContainerName="LicenseEntities" EnableDelete="True" EnableFlattening="False" EntitySetName="LicenseDBs">
         </asp:EntityDataSource>
-        <asp:DataPager ID="DataPager1" runat="server" PagedControlID="ListView1" PageSize="50">
+        <asp:DataPager ID="DataPager1" runat="server" PagedControlID="ListView1" PageSize="35">
             <Fields>
                 <asp:NextPreviousPagerField ButtonType="Button" />
             </Fields>

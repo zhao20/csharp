@@ -43,7 +43,7 @@ namespace Phase5
                         gvSearchByZip.DataSource = result.ToList();
                         gvSearchByZip.DataBind();
 
-
+                        lblMessage.Text = "There are " + result.Count() + " results has been found!";
                     }
 
                 }
