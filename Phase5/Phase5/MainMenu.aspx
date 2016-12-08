@@ -20,6 +20,8 @@
        <a href="List.aspx"> Show entire List</a>
         <br /><br />
         <a href="adding.aspx">Add a License</a>
+         <br /><br />
+        <a href="Update.aspx">Update a License</a>
         <br /><br />
         <a href="Search.aspx">Search</a>
         <br /><br />

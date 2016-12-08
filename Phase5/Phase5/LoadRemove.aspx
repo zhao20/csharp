@@ -20,7 +20,7 @@
                     <td>
                         <center><div>
     
-                                Select Your CSV File:<asp:FileUpload ID="fuCSV" runat="server" />
+                                Select Your CSV File:<asp:FileUpload ID="fuCSV" runat="server" accept=".csv"/>
     
                     </div>
                         <br />
@@ -47,7 +47,8 @@
         </table>
 
         &nbsp;&nbsp
-       <center><asp:Label ID="lblResult" runat="server" Text="Label" ForeColor="Red"></asp:Label></center> 
+       <center><asp:Label ID="lblMessage" runat="server" Text="Label" ForeColor="Red"></asp:Label>
+           </center> 
        <center><asp:Button ID="btnList" runat="server" Text="Show List" Visible="False"/></center> 
 
     </form>

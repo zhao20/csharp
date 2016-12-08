@@ -136,6 +136,7 @@
     <Content Include="MainMenu.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Statistics.aspx" />
+    <Content Include="Update.aspx" />
     <Content Include="Web.config" />
     <Content Include="Adding.aspx" />
   </ItemGroup>
@@ -166,6 +167,13 @@
     </Compile>
     <Compile Include="Statistics.aspx.designer.cs">
       <DependentUpon>Statistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
     <Content Include="App_Code\RegularExpressions.cs" />
     <Compile Include="App_Code\Restaurant.cs" />
