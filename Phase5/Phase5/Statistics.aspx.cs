@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*Phase 5
+ * Xingguo Zhao & Justin Holland
+ * programming in C# 
+ * 2016/12/8
+ * Statistic.aspx.cs
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,34 +21,39 @@ namespace Phase5
             lblMessage.Text = "";
         }
 
+        /*
+         * This function the get all business by zipcode
+         * 
+         */
         protected void btnTopThree_Click(object sender, EventArgs e)
         {
             lblMessage.Text = "";
-            try { 
-            using(LicenseEntities le = new LicenseEntities())
+            try
             {
-                GridView1.DataSource = null;
-                GridView1.DataBind();
-                if (!String.IsNullOrWhiteSpace(ddlCity.SelectedValue))
+                using (LicenseEntities le = new LicenseEntities())
                 {
-                    var licenses = le.LicenseDBs;
-                    var result = licenses.Where(n => n.City == ddlCity.SelectedValue).Take(3);
-                    
-                   // lvTopThree.DataSource = result.ToList();
-                    GridView1.DataSource = result.ToList();
+                    GridView1.DataSource = null;
                     GridView1.DataBind();
-                 
-                }
+                    if (!String.IsNullOrWhiteSpace(ddlCity.SelectedValue))
+                    {
+                        var licenses = le.LicenseDBs;
+                        //get result by zipcode
+                        var result = licenses.Where(n => n.City == ddlCity.SelectedValue).Take(3);
 
+                        // lvTopThree.DataSource = result.ToList();
+                        GridView1.DataSource = result.ToList();
+                        GridView1.DataBind();
+
+                    }
+                }
             }
-        }
             catch (Exception)
             {
                 lblMessage.Text = "DataBase Connection Failed!";
             }
 
-}
+        }
 
-       
+
     }
 }
