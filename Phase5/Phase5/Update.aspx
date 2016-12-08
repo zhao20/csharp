@@ -41,23 +41,30 @@ type="text/javascript"></script>
             window.location.href = 'MainMenu.aspx';
         }
 
-        function funcClean()
-        {
-            var elements = document.getElementsByTagName("input");
-            for (var ii = 0; ii < elements.length; ii++) {
-                if (elements[ii].type == "text") {
-                    elements[ii].value = "";
-                }
-            }
-            Page_ClientValidate('');
-            lblSuccess.Text = "";
-        }
+        //function funcClean()
+        //{
+        //    var elements = document.getElementsByTagName("input");
+        //    for (var ii = 0; ii < elements.length; ii++) {
+        //        if (elements[ii].type == "text") {
+        //            elements[ii].value = "";
+        //        }
+        //    }
+        //    document.forms[0].reset();
+
+        //    for (i = 0; i < Page_Validators.length; i++) {
+        //        Page_Validators[i].style.visibility = 'hidden';
+        //    }
+
+  
+
+        //  //  lblMessage.Text = "";
+        //}
     </script>
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function () {
             $("#btnADD").click(function () {
-                lblSuccess.Text = "";
+                lblMessage.Text = "";
                 Page_ClientValidate('');
 
             });
@@ -73,6 +80,7 @@ type="text/javascript"></script>
     </style>
 </head>
 <body>
+    <center>
     <form id="form1" runat="server">
 
         <table>
@@ -164,6 +172,15 @@ type="text/javascript"></script>
 
         </Table>
 
+         <p>
+              <input type="button" name="btnMainMenu" runat="server" value="Back MainMenu" onclick="BackToMain()" />&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="126px" OnClick="btnSubmit_Click"  validationGroup="First"/>&nbsp;&nbsp;&nbsp;&nbsp;
+               
+              
+             </p>
+            <asp:Label ID="lblMessage" runat="server" Text="Label"></asp:Label>
     </form>
+
+         </center>
 </body>
 </html>
