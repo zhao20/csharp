@@ -4,57 +4,55 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<!--include jQuery -->  
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  
-type="text/javascript">
+<!--include jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+    type="text/javascript">
 
 
-</script>   
-<!--include jQuery Validation Plugin-->  
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"  
-type="text/javascript"></script> 
+</script>
+<!--include jQuery Validation Plugin-->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"
+    type="text/javascript"></script>
 <head runat="server">
     <title></title>
     <style>
-        p.altertive { 
+        p.altertive {
             background: lightblue;
         }
-
     </style>
 </head>
-    <script type="text/javascript">
-  
+<script type="text/javascript">
 
-        function BackToMain() {
 
-            window.location.href = 'Menu.aspx';
-        }
+    function BackToMain() {
 
-        function funcClean()
-        {
-            var elements = document.getElementsByTagName("input");
-            for (var ii = 0; ii < elements.length; ii++) {
-                if (elements[ii].type == "text") {
-                    elements[ii].value = "";
-                }
+        window.location.href = 'Menu.aspx';
+    }
+
+    function funcClean() {
+        var elements = document.getElementsByTagName("input");
+        for (var ii = 0; ii < elements.length; ii++) {
+            if (elements[ii].type == "text") {
+                elements[ii].value = "";
             }
-            Page_ClientValidate('');
-            lblSuccess.Text = "";
         }
-    </script>
+        Page_ClientValidate('');
+        lblSuccess.Text = "";
+    }
+</script>
 
-    <script type="text/javascript" language="javascript">
-        $(document).ready(function () {
-            $("#btnADD").click(function () {
-                lblSuccess.Text = "";
-                Page_ClientValidate('');
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $("#btnADD").click(function () {
+            lblSuccess.Text = "";
+            Page_ClientValidate('');
 
-            });
         });
-                </script>
+    });
+</script>
 
 <body>
-   <center> <form id="form1" runat="server" >
+    <center> <form id="form1" runat="server" >
        <asp:Label ID="lblSuccess" runat="server" Text="" ForeColor ="Red"></asp:Label>
        <Table border ="1" cellpadding="10" cellspacing ="0" >
 

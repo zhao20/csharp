@@ -30,13 +30,13 @@ namespace Phase5
          */
         protected void btnModify_Click(object sender, EventArgs e)
         {
-         
+
             //Check the fid has inputted or not
             if (!String.IsNullOrWhiteSpace(txtFID.Text))
             {
                 //clean existed value of textboxes
                 CleanText();
-               
+
                 using (LicenseEntities le = new LicenseEntities())
                 {
                     try
@@ -69,7 +69,7 @@ namespace Phase5
                 }
 
             }
-                
+
         }
 
         /*This is a Websevice method fo the AutoComplete text input

@@ -14,9 +14,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <table border ="0" style="width:60%">
+        <table border="0" style="width: 60%">
             <thead>
-                <tr> 
+                <tr>
                     <td>
                         <center><div>
     
@@ -28,12 +28,12 @@
                         <div>
                         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
                             </div>
-                     </center> 
+                     </center>
                     </td>
                     <td>
-                       <center><asp:Button ID="btnRemove" runat="server" Text="Remove All Data" OnClick="btnRemove_Click" />
+                        <center><asp:Button ID="btnRemove" runat="server" Text="Remove All Data" OnClick="btnRemove_Click" />
                           
-                        </center> 
+                        </center>
                     </td>
                     <td>
                         <input type="button" name="btnMainMenu" runat="server" value="Back MainMenu" onclick="BackToMain()" />
@@ -41,15 +41,15 @@
 
                 </tr>
             </thead>
-                    
-    
+
+
 
         </table>
 
         &nbsp;&nbsp
        <center><asp:Label ID="lblMessage" runat="server" Text="Label" ForeColor="Red"></asp:Label>
-           </center> 
-       <center><asp:Button ID="btnList" runat="server" Text="Show List" Visible="False"/></center> 
+           </center>
+        <center><asp:Button ID="btnList" runat="server" Text="Show List" Visible="False"/></center>
 
     </form>
 </body>

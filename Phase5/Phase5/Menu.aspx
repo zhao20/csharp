@@ -6,9 +6,9 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        a:hover{font-size:24px;
-                background-color: yellow;
-                
+        a:hover {
+            font-size: 24px;
+            background-color: yellow;
         }
     </style>
 </head>
@@ -34,6 +34,6 @@
         <a href="Statistics.aspx">Statistics</a>
     </form>
         </center>
-    </body>
+</body>
 </html>
 

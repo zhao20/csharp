@@ -8,13 +8,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
-        
+        <div>
+        </div>
+
         <asp:ListView ID="ListView1" runat="server" DataKeyNames="FID" DataSourceID="EntityDataSource1">
             <AlternatingItemTemplate>
-                <tr style="background-color: #FFFFFF;color: #284775;">
+                <tr style="background-color: #FFFFFF; color: #284775;">
                     <td>
                         <asp:Label ID="Business_NameLabel" runat="server" Text='<%# Eval("Business_Name") %>' />
                     </td>
@@ -86,7 +85,7 @@
                 </tr>
             </EditItemTemplate>
             <EmptyDataTemplate>
-                <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                <table runat="server" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px;">
                     <tr>
                         <td>No data was returned.</td>
                     </tr>
@@ -131,7 +130,7 @@
                 </tr>
             </InsertItemTemplate>
             <ItemTemplate>
-                <tr style="background-color: #E0FFFF;color: #333333;">
+                <tr style="background-color: #E0FFFF; color: #333333;">
                     <td>
                         <asp:Label ID="Business_NameLabel" runat="server" Text='<%# Eval("Business_Name") %>' />
                     </td>
@@ -168,8 +167,8 @@
                 <table runat="server">
                     <tr runat="server">
                         <td runat="server">
-                            <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                <tr runat="server" style="background-color: #E0FFFF;color: #333333;">
+                            <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px; font-family: Verdana, Arial, Helvetica, sans-serif;">
+                                <tr runat="server" style="background-color: #E0FFFF; color: #333333;">
                                     <th runat="server">Business_Name</th>
                                     <th runat="server">Street_Address</th>
                                     <th runat="server">City</th>
@@ -187,12 +186,12 @@
                         </td>
                     </tr>
                     <tr runat="server">
-                        <td runat="server" style="text-align: center;background-color: #5D7B9D;font-family: Verdana, Arial, Helvetica, sans-serif;color: #FFFFFF"></td>
+                        <td runat="server" style="text-align: center; background-color: #5D7B9D; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF"></td>
                     </tr>
                 </table>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <tr style="background-color: #E2DED6;font-weight: bold;color: #333333;">
+                <tr style="background-color: #E2DED6; font-weight: bold; color: #333333;">
                     <td>
                         <asp:Label ID="Business_NameLabel" runat="server" Text='<%# Eval("Business_Name") %>' />
                     </td>

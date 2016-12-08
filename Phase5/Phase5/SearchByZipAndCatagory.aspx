@@ -3,18 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-        <script type="text/javascript">
-  
+    <script type="text/javascript">
+
 
         function BackToMain() {
 
             window.location.href = 'Menu.aspx';
         }
-</script>
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
-   <center> <div>
+        <center> <div>
            <asp:DropDownList ID="ddlZip" runat="server" DataSourceID="SqlDataSource1" 
                    DataTextField="Zip" DataValueField="Zip"> </asp:DropDownList>&nbsp;&nbsp; <asp:DropDownList ID="ddlCategory" runat="server" DataSourceID="SqlDataSource2" DataTextField="Classification_Code" DataValueField="Classification_Code"></asp:DropDownList>
                 &nbsp;&nbsp;&nbsp;

@@ -7,58 +7,58 @@
     <title></title>
 
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <!--include jQuery Validation Plugin-->  
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"  
-type="text/javascript"></script> 
-<script language="javascript" type="text/javascript">
-    $(function () {
-        $('#<%=txtFID.ClientID%>').autocomplete({
-    source: function (request, response) {
-        $.ajax({
-            url: "Update.aspx/GetFID",
-            data: "{ 'pre':'" + request.term + "'}",
-            dataType: "json",
-            type: "POST",
-            contentType: "application/json; charset=utf-8",
-            success: function (data) {
-                response($.map(data.d, function (item) {
-                    return { value: item }
-                }))
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                alert(textStatus);
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!--include jQuery Validation Plugin-->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"
+        type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            $('#<%=txtFID.ClientID%>').autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "Update.aspx/GetFID",
+                    data: "{ 'pre':'" + request.term + "'}",
+                    dataType: "json",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        response($.map(data.d, function (item) {
+                            return { value: item }
+                        }))
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(textStatus);
+                    }
+                });
             }
         });
-    }
-});
     });
 
-    
-        function BackToMain() {
 
-            window.location.href = 'Menu.aspx';
-        }
+    function BackToMain() {
 
-        //function funcClean()
-        //{
-        //    var elements = document.getElementsByTagName("input");
-        //    for (var ii = 0; ii < elements.length; ii++) {
-        //        if (elements[ii].type == "text") {
-        //            elements[ii].value = "";
-        //        }
-        //    }
-        //    document.forms[0].reset();
+        window.location.href = 'Menu.aspx';
+    }
 
-        //    for (i = 0; i < Page_Validators.length; i++) {
-        //        Page_Validators[i].style.visibility = 'hidden';
-        //    }
+    //function funcClean()
+    //{
+    //    var elements = document.getElementsByTagName("input");
+    //    for (var ii = 0; ii < elements.length; ii++) {
+    //        if (elements[ii].type == "text") {
+    //            elements[ii].value = "";
+    //        }
+    //    }
+    //    document.forms[0].reset();
 
-  
+    //    for (i = 0; i < Page_Validators.length; i++) {
+    //        Page_Validators[i].style.visibility = 'hidden';
+    //    }
 
-        //  //  lblMessage.Text = "";
-        //}
+
+
+    //  //  lblMessage.Text = "";
+    //}
     </script>
 
     <script type="text/javascript" language="javascript">
@@ -69,14 +69,13 @@ type="text/javascript"></script>
 
             });
         });
-</script>
+    </script>
 
-  
+
     <style>
-        p.altertive { 
+        p.altertive {
             background: lightblue;
         }
-
     </style>
 </head>
 <body>
