@@ -118,12 +118,12 @@ namespace Phase5
 
                             le.Entry(updataeLicense).State = System.Data.EntityState.Modified;
                             le.SaveChanges();
-                            lblMessage.Text = "Updata Success!";
+                            lblMessage.Text = "Update Success!";
                         }
                     }
                     catch (Exception)
                     {
-                        lblMessage.Text = "Updata failed!";
+                        lblMessage.Text = "Update failed!";
                     }
                 }
             }

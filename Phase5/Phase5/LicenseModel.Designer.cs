@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\GitHub\csharp\Phase5\Phase5\LicenseModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\jjhollan\Documents\repo\csharp\Phase5\Phase5\LicenseModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
