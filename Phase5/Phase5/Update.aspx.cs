@@ -26,7 +26,8 @@ namespace Phase5
                 {
                     try
                     {
-                        var lic = le.LicenseDBs.SingleOrDefault(n => n.FID == Convert.ToInt32(txtFID.Text));
+                        int fid = Convert.ToInt32(txtFID.Text);
+                        var lic = le.LicenseDBs.SingleOrDefault(n => n.FID == fid);
                         if (lic != null)
                         {
 
